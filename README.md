@@ -5,6 +5,8 @@ PCSTORE App using Angular + Okta Authentication + Spring boot + MySql
 
 Shop application using Angular. This repository only contains the Angular project only.
 
+demo: https://youtu.be/2HGx05Rz_Is
+
 server: https://github.com/bogdankis/pc-store-server
 
 ## Dependencies
