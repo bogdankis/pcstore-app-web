@@ -1,3 +1,21 @@
+# **PCSTORE App Angular shop **
+
+PCSTORE App using Angular + Okta Authentication + Spring boot + MySql
+
+
+Shop application using Angular. This repository only contains the Angular project only.
+
+server: https://github.com/bogdankis/pc-store-server
+
+## Dependencies
+| Name             | Version | Github Link                                        |
+| ---------------- | ------- | -------------------------------------------------- |
+| angular          | 11.2.12 | https://github.com/angular/angular           	  |
+| fontawesome-free | 5.15.3  | https://github.com/FortAwesome/angular-fontawesome |
+| ng-bootstrap	   | 9.1.0   | https://github.com/ng-bootstrap/ng-bootstrap       |
+| okta-angular     | 3.1.0   | https://github.com/okta/okta-angular               |
+
+
 # AngularEcommerce
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.11.
