@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  pcstoreApiUrl: "https://localhost:8443/api"
+  pcstoreApiUrl: "https://localhost:8443/api",
+  stripePublishableKey: "pk_test_51LZp0aIi3LTKRMgkVTQyaGnXLRJJ6KuHnRAwYrO5AvDIXZ80stKIERwAtgG1jwzJRCMjfRQODjUgb1OYHrOWIWRo00mFHuD644"
 };
 
 /*

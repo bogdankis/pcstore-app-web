@@ -11,7 +11,7 @@ import { State } from '../common/state';
 })
 export class PcshopFormService {
 
-  private countriesUrl = environment.pcstoreApiUrl + '/api/countries';
+  private countriesUrl = environment.pcstoreApiUrl + '/countries';
   private statesUrl = environment.pcstoreApiUrl + '/states';
 
   constructor(private httpClient: HttpClient ) { }
