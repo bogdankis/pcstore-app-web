@@ -256,9 +256,10 @@ purchase.order = order;
 purchase.orderItems = orderItems;
 
 //TODO compute payment info
-this.paymentInfo.amount = this.totalPrice * 100;
+this.paymentInfo.amount = Math.round(this.totalPrice * 100);
 this.paymentInfo.currency = "EUR";
 
+console.log(`this.paymentInfo.amount: ${this.paymentInfo.amount}`);
 
 //TODO if valid form
 //TODO create payment intent
