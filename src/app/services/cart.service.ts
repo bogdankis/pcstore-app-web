@@ -69,9 +69,9 @@ export class CartService {
     this.logCartData(totalPriceValue, totalQuantityValue);
 
     //TODO persist cart data
-    this.persistCartITems();
+    this.persistCartItems();
   }
-persistCartITems(){
+persistCartItems(){
   this.storage.setItem('cartItems',JSON.stringify(this.cartItems));
 }
 

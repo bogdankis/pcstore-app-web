@@ -256,7 +256,7 @@ purchase.order = order;
 purchase.orderItems = orderItems;
 
 //TODO compute payment info
-this.paymentInfo.amount = Math.round(this.totalPrice * 100);
+this.paymentInfo.amount = Math.round(this.totalPrice * 100); // rounds number before payment 
 this.paymentInfo.currency = "EUR";
 
 console.log(`this.paymentInfo.amount: ${this.paymentInfo.amount}`);
@@ -310,8 +310,11 @@ if(!this.checkoutFormGroup.invalid && this.displayError.textContent === ""){
     this.cartService.cartItems = [];
     this.cartService.totalPrice.next(0);
     this.cartService.totalQuantity.next(0);
+    this.cartService.persistCartItems(); // update storage with latest update of cart
+
     //reset the form
     this.checkoutFormGroup.reset();
+
     //navigate  to the product page
     this.router.navigateByUrl("/products");
   }
