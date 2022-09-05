@@ -41,6 +41,8 @@ export class CheckoutComponent implements OnInit {
   cardElement: any;
   displayError: any ="";
 
+  isDisabled: boolean = false;
+
   constructor(private formBuilder: FormBuilder,
     private pcShopFormService: PcshopFormService,
     private cartService: CartService,
@@ -224,8 +226,10 @@ export class CheckoutComponent implements OnInit {
 let order = new Order();
 order.totalPrice = this.totalPrice;
 order.totalQuantity = this.totalQuantity;
+
 //TODO get cart items
 const cartItems = this.cartService.cartItems;
+
 //TODO create orderItems from cartItems
 let orderItems: OrderItem[] = [];
 for(let i = 0; i<cartItems.length; i++){
@@ -268,6 +272,8 @@ console.log(`this.paymentInfo.amount: ${this.paymentInfo.amount}`);
 
 if(!this.checkoutFormGroup.invalid && this.displayError.textContent === ""){
 
+  this.isDisabled = true;
+
   this.checkoutService.createPaymentIntent(this.paymentInfo).subscribe(
     (paymentIntentResponse) => {
       this.stripe.confirmCardPayment(paymentIntentResponse.client_secret, 
@@ -292,16 +298,20 @@ if(!this.checkoutFormGroup.invalid && this.displayError.textContent === ""){
           if(result.error){
             //inform the customer there was an error
             alert(`There was an error: ${result.error.message}`);
+            this.isDisabled = false;
           }else{
             //call the REST API via the checkoutService 
             this.checkoutService.placeOrder(purchase).subscribe({
               next: response =>{
                 alert(`Your order has been received.\nOrder tracking number ${response.orderTrackingNumber}`);
+                
                 //reset cart
                 this.resetCart();
+                this.isDisabled = false;
               },
               error: err => {
                 alert(`There was an error: ${err.message}`);
+                this.isDisabled = false;
               }
             })
           }
