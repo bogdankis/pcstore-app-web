@@ -262,6 +262,7 @@ purchase.orderItems = orderItems;
 //TODO compute payment info
 this.paymentInfo.amount = Math.round(this.totalPrice * 100); // rounds number before payment 
 this.paymentInfo.currency = "EUR";
+this.paymentInfo.receiptEmail = purchase.customer.email;
 
 console.log(`this.paymentInfo.amount: ${this.paymentInfo.amount}`);
 
