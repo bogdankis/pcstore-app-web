@@ -12,10 +12,10 @@ server: https://github.com/bogdankis/pc-store-server
 ## Dependencies
 | Name             | Version | Github Link                                        |
 | ---------------- | ------- | -------------------------------------------------- |
-| angular          | 11.2.12 | https://github.com/angular/angular           	  |
-| fontawesome-free | 5.15.3  | https://github.com/FortAwesome/angular-fontawesome |
-| ng-bootstrap	   | 9.1.0   | https://github.com/ng-bootstrap/ng-bootstrap       |
-| okta-angular     | 3.1.0   | https://github.com/okta/okta-angular               |
+| angular          | 14.1.0  | https://github.com/angular/angular           	  |
+| fontawesome-free | 6.1.1   | https://github.com/FortAwesome/angular-fontawesome |
+| ng-bootstrap	   | 13.0.0  | https://github.com/ng-bootstrap/ng-bootstrap       |
+| okta-angular     | 3.2.2   | https://github.com/okta/okta-angular               |
 
 
 # AngularEcommerce
